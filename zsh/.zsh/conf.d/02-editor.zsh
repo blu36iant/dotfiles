@@ -4,6 +4,6 @@ if command -v nvim &> /dev/null; then
 elif command -v vim &> /dev/null; then
 	alias -g vi='vim'
 else
-	echo "No existen los binarios de 'nvim' y/o 'vim', UNIX vi fallback EDITOR'
+	echo "No existen los binarios de 'nvim' y/o 'vim', UNIX vi fallback EDITOR"
 fi
 
