@@ -369,7 +369,7 @@ plug "zap-zsh/fzf"
 
 #Autoload custom functions
 if [ -d "$ZDOTDIR/functions" ]; then
-   fpath=( ~/.zsh/functions "${fpath[@]}")
+   fpath=( "$ZDOTDIR/functions" "${fpath[@]}")
    autoload -Uz $fpath[1]/*(.:t)
 else
     print "404: ~/.zsh/functions not found."
