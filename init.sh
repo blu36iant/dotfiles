@@ -8,8 +8,8 @@ sudo xbps-install -Syu $VOID_PKGS
 echo "Installing Zsh plugin manager...."
 stow git
 stow zsh
-git clone -b "--release-v1" https://github.com/zap-zsh/zap.git "$HOME/.config/zsh/zap"
-source $HOME/.zshrc
+git clone -b "release-v1" https://github.com/zap-zsh/zap.git "$HOME/.config/zsh/zap"
+zsh
 #zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1 --keep
 
 stow river
