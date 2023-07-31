@@ -1,6 +1,6 @@
 #/bin/sh
 
-VOID_PKGS='git stow nvm neovim zsh zsh-zsh-completions curl bat fzf'
+VOID_PKGS='git stow curl neovim zsh zsh-completions zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting bat fzf fd ripgrep'
 
 echo "Installing necesary distro packages..."
 sudo xbps-install -Syu $VOID_PKGS 
