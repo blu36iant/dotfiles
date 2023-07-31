@@ -1,13 +1,14 @@
 #! /bin/zsh
 
 echo "Installing necesary distro packages..."
-sudo xbps-install -Syu git stow curl neovim zsh zsh-completions zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting bat fzf fd ripgrep
+sudo xbps-install -Syu git stow curl unzip neovim zsh zsh-completions zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting bat fzf fd ripgrep
 
 echo "Installing Zsh plugin manager...."
 stow git
 stow zsh
-git clone --branch release-v1 https://github.com/zap-zsh/zap.git "$HOME/.config/zsh/zap"
-#zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1 --keep
+#git clone --branch release-v1 https://github.com/zap-zsh/zap.git "$HOME/.config/zsh/zap"
+#source $HOME/.zshrc 
+zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1 --keep
 
 stow river
 stow foot
