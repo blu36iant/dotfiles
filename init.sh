@@ -21,4 +21,8 @@ echo "Installing getnf for NerdFonts"
 curl 'https://raw.githubusercontent.com/ronniedroid/getnf/master/getnf' -o "$HOME/.local/bin/getnf"
 chmod u+x $HOME/.local/bin/getnf
 export PATH=$PATH:$HOME/.local/bin
-getnf
+getnf<<EOF
+8,13,17,18,21,27,28,30,31,32,34,41,47,51
+
+EOF
+chsh -s /bin/zsh
