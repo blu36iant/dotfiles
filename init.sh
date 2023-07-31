@@ -31,3 +31,4 @@ echo "Installing batmn extras"
 git clone https://github.com/eth-p/bat-extras "$HOME/.local/src/bat-extras"
 cd "$HOME/.local/src/bat-extras"
 ./build.sh --install --minify=all --compress --prefix="$HOME/.local" 
+exec zsh
