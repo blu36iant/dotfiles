@@ -335,7 +335,6 @@ else
 fi
 
 # Determine terminal capabilities.
-
 if ! zmodload zsh/langinfo zsh/terminfo ||
   [[ $langinfo[CODESET] != (utf|UTF)(-|)8 || $TERM == (dumb|linux) ]] ||
   (( terminfo[colors] < 256 )); then
@@ -347,7 +346,6 @@ if ! zmodload zsh/langinfo zsh/terminfo ||
     alias x='startx ~/.xinitrc'
   fi
 fi
-} 2>/dev/null
 
 if [[ $USE_POWERLINE == false ]]; then
   # Use 8 colors and ASCII.
