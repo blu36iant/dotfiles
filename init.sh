@@ -20,7 +20,6 @@ echo "Installing getnf for NerdFonts"
 [[ -d "$HOME/.local/bin" ]] || mkdir -p "$HOME/.local/bin"
 curl 'https://raw.githubusercontent.com/ronniedroid/getnf/master/getnf' -o "$HOME/.local/bin/getnf"
 chmod u+x $HOME/.local/bin/getnf
-export PATH=$PATH:$HOME/.local/bin
 getnf<<EOF
 8,13,17,18,21,27,28,30,31,32,34,41,47,51
 
@@ -29,7 +28,6 @@ rm -rf NerdFonts
 [[ -n "SHELL" && "$SHELL" == "/bin/zsh" ]] || chsh -s /bin/zsh
 
 echo "Installing batmn extras"
-git clone https://github.com/eth-p/bat-extras
-cd bat-extras
-sudo ./build --install
-
+git clone https://github.com/eth-p/bat-extras "$HOME/.local/src/bat-extras"
+cd "$HOME/.local/src/bat-extras"
+./build --install --minify=all ---compress --prefix="$HOME/.local" 
