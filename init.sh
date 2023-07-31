@@ -6,7 +6,8 @@ sudo xbps-install -Syu git stow curl neovim zsh zsh-completions zsh-autosuggesti
 echo "Installing Zsh plugin manager...."
 stow git
 stow zsh
-zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1 --keep
+git clone --branch release-v1 https://github.com/zap-zsh/zap.git "$HOME/.config/zsh/zap"
+#zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1 --keep
 
 stow river
 stow foot
