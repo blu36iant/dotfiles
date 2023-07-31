@@ -1,3 +1,0 @@
-alias v=$EDITOR
-alias s='source ~/.zshrc'
-alias e='v ~/.zshrc'

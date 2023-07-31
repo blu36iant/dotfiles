@@ -1,0 +1,35 @@
+# Default config for sway
+#
+# Copy this to ~/.config/sway/config and edit it to your liking.
+#
+# Read `man 5 sway` for a complete reference.
+
+# sway root configdir
+set $rootconf $HOME/.config/sway
+
+# styles - set the folder for your theme definition file
+set $theme $rootconf/themes/matcha-green
+
+# theme variables
+include $theme/definitions
+
+# global variables
+include $rootconf/definitions
+
+# user variables
+include $rootconf/definitions.d/*.conf
+
+include $rootconf/inputs/*
+include $rootconf/outputs/*
+
+# enable modes
+include $rootconf/modes/*
+
+# only enable this if every app you use is compatible with wayland
+# xwayland disable
+
+# include additional configs e.g. to autostart applications
+include $rootconf/autostart/*.conf
+
+# user config
+include $rootconf/config.d/*.conf
