@@ -1,7 +1,7 @@
 #! /bin/zsh
 
 echo "Installing necesary distro packages..."
-sudo xbps-install -Syu git stow curl unzip neovim zsh zsh-completions zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting bat fzf fd ripgrep
+sudo xbps-install -Syu git stow curl shfmt unzip neovim zsh zsh-completions zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting bat fzf fd ripgrep
 
 echo "Installing Zsh plugin manager...."
 stow git
@@ -26,4 +26,10 @@ getnf<<EOF
 
 EOF
 rm -rf NerdFonts
-chsh -s /bin/zsh
+[[ -n "SHELL" && "$SHELL" == "/bin/zsh" ]] || chsh -s /bin/zsh
+
+echo "Installing batmn extras"
+git clone https://github.com/eth-p/bat-extras
+cd bat-extras
+sudo ./build --install
+

@@ -1,6 +1,8 @@
 alias v=$EDITOR
 alias s='source ~/.zshrc'
 alias e='v ~/.zshrc'
+alias man='batman'
+
 ## Alias section
 alias cp="cp -i"                                                # Confirm before overwriting something
 alias df='df -h'                                                # Human-readable sizes
