@@ -25,4 +25,5 @@ getnf<<EOF
 8,13,17,18,21,27,28,30,31,32,34,41,47,51
 
 EOF
+rm -rf NerdFonts
 chsh -s /bin/zsh

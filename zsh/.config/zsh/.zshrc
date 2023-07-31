@@ -375,3 +375,4 @@ else
     print "404: ~/.zsh/functions not found."
 fi
 
+export PATH="$PATH:$HOME/.local/bin"
