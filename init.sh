@@ -21,7 +21,7 @@ echo "Installing Zsh plugin manager...."
 git clone --branch release-v1 'https://github.com/zap-zsh/zap.git' "$HOME/.local/share/zap"
 #curl "$ZAP_URL" | zsh -s -- "--branch" "release-v1" "--keep"
 
-zsh -x<<EOF
+zsh<<EOF
 source $HOME/.zshrc 
 print "Installing getnf for NerdFonts..."
 if command -v fc-cache &>/dev/null; then
